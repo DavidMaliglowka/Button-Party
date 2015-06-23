@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,17 +22,32 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAX-b6-0ns"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Get Crazy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCd-Tu-HKO">
+                                <rect key="frame" x="240" y="302" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="jCd-Tu-HKO" secondAttribute="bottom" constant="277" id="0GO-0M-2Ht"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W7K-lj-3D3" secondAttribute="bottom" constant="8" symbolic="YES" id="8x5-AY-Q2L"/>
                             <constraint firstItem="W7K-lj-3D3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Laj-c4-cdg"/>
+                            <constraint firstAttribute="centerX" secondItem="jCd-Tu-HKO" secondAttribute="centerX" id="WDf-ZN-ll7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="jCd-Tu-HKO" id="b5k-UB-fFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="317"/>
         </scene>
     </scenes>
 </document>
